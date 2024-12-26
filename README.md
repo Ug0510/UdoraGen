@@ -23,11 +23,13 @@
 To get started with **UdoraGen**, follow these steps:
 
 ### 1. Clone the repository:
-```bash
+```json
 git clone https://github.com/your-username/udora-gen.git
-cd udora-gen```
+cd udora-gen
+```
 
 ### 2. Install dependencies:
 ```bash
-cd backend && npm i && cd .. && cd frontend && npm i```
+cd backend && npm i && cd .. && cd frontend && npm i
+```
 

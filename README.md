@@ -23,7 +23,7 @@
 To get started with **UdoraGen**, follow these steps:
 
 ### 1. Clone the repository:
-```json
+```bash
 git clone https://github.com/your-username/udora-gen.git
 cd udora-gen
 ```

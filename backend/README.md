@@ -50,37 +50,37 @@ Udora Gen is a modern, AI-powered chatbot that allows users to interact with an 
 ---
 
 ## **Directory Structure**
+```
 udora-gen/
-├── backend/ # Backend code
-│ ├── config/ # Configuration files
-│ ├── controllers/ # Route handlers
-│ ├── middleware/ # Custom middleware
-│ ├── models/ # Database models
-│ ├── routes/ # API route definitions
-│ ├── services/ # Business logic and external API calls
-│ ├── utils/ # Utility functions and helpers
-│ ├── validators/ # Request validation schemas
-│ ├── app.js # Main application file
-│ ├── server.js # Server entry point
-│ └── .env # Environment variables
-├── frontend/ # Frontend code
-│ ├── public/ # Static assets
-│ ├── src/ # Main source code
-│ │ ├── components/ # Reusable UI components
-│ │ ├── context/ # React Context API for state management
-│ │ ├── hooks/ # Custom React hooks
-│ │ ├── pages/ # Application pages
-│ │ ├── services/ # API services
-│ │ ├── styles/ # Global and component-specific styles
-│ │ ├── utils/ # Utility functions and helpers
-│ │ ├── App.jsx # Main application component
-│ │ ├── main.jsx # Entry point for the app
-│ │ └── index.css # Global styles
-│ └── package.json # Frontend dependencies and scripts
-├── .gitignore # Git ignore file
-└── README.md # Project documentation
-
-Copy
+├── backend/               # Backend code
+│   ├── config/            # Configuration files
+│   ├── controllers/       # Route handlers
+│   ├── middleware/        # Custom middleware
+│   ├── models/            # Database models
+│   ├── routes/            # API route definitions
+│   ├── services/          # Business logic and external API calls
+│   ├── utils/             # Utility functions and helpers
+│   ├── validators/        # Request validation schemas
+│   ├── app.js             # Main application file
+│   ├── server.js          # Server entry point
+│   └── .env               # Environment variables
+├── frontend/              # Frontend code
+│   ├── public/            # Static assets
+│   ├── src/               # Main source code
+│   │   ├── components/    # Reusable UI components
+│   │   ├── context/       # React Context API for state management
+│   │   ├── hooks/         # Custom React hooks
+│   │   ├── pages/         # Application pages
+│   │   ├── services/      # API services
+│   │   ├── styles/        # Global and component-specific styles
+│   │   ├── utils/         # Utility functions and helpers
+│   │   ├── App.jsx        # Main application component
+│   │   ├── main.jsx       # Entry point for the app
+│   │   └── index.css      # Global styles
+│   └── package.json       # Frontend dependencies and scripts
+├── .gitignore             # Git ignore file
+└── README.md              # Project documentation
+```
 
 ---
 
@@ -90,126 +90,126 @@ Copy
 ```bash
 git clone https://github.com/your-username/udora-gen.git
 cd udora-gen
-2. Backend Setup
+```
+
+### **2. Backend Setup**
 Navigate to the backend folder:
-
-bash
-Copy
+```bash
 cd backend
-Install dependencies:
+```
 
-bash
-Copy
+Install dependencies:
+```bash
 npm install
-Create a .env file in the backend folder and add the required environment variables (see .env.example).
+```
+
+Create a `.env` file in the backend folder and add the required environment variables (see `.env.example`).
 
 Start the backend server:
-
-bash
-Copy
+```bash
 npm start
-3. Frontend Setup
+```
+
+### **3. Frontend Setup**
 Navigate to the frontend folder:
-
-bash
-Copy
+```bash
 cd ../frontend
+```
+
 Install dependencies:
-
-bash
-Copy
+```bash
 npm install
+```
+
 Start the frontend development server:
-
-bash
-Copy
+```bash
 npm run dev
-Usage
-Register/Login:
-
-Register a new user or log in with existing credentials.
-
-Chat with Udora Gen:
-
-Type your message in the chat input and press Enter.
-
-Udora Gen will respond with an intelligent reply.
-
-Upload Files:
-
-Click the "Upload" button to upload a PDF or image.
-
-Udora Gen will analyze the file and provide insights.
-
-View Analytics:
-
-Navigate to the "Analytics" page to view chat and file usage statistics.
-
-Customize UI:
-
-Toggle between light and dark mode using the theme toggle button.
-
-API Endpoints
-Authentication
-POST /api/auth/register - Register a new user.
-
-POST /api/auth/login - Log in an existing user.
-
-Chat
-POST /api/chat/send - Send a message to the chatbot.
-
-GET /api/chat/history - Get chat history.
-
-File Uploads
-POST /api/file/upload - Upload a file (PDF or image).
-
-GET /api/file/user - Get all files uploaded by the user.
-
-User Profile
-GET /api/user/profile - Get user profile.
-
-PUT /api/user/profile - Update user profile.
-
-Analytics
-GET /api/analytics/chat - Get chat analytics.
-
-GET /api/analytics/file - Get file analytics.
-
-Contributing
-Fork the repository.
-
-Create a new branch:
-
-bash
-Copy
-git checkout -b feature/your-feature-name
-Commit your changes:
-
-bash
-Copy
-git commit -m "Add your feature"
-Push to the branch:
-
-bash
-Copy
-git push origin feature/your-feature-name
-Open a pull request.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Contact
-For any questions or feedback, please contact:
-
-Your Name - your.email@example.com
-
-Project Link: https://github.com/your-username/udora-gen
-
-Copy
+```
 
 ---
 
-### **Flow and Connections**
+## **Usage**
+
+1. **Register/Login**:
+   - Register a new user or log in with existing credentials.
+
+2. **Chat with Udora Gen**:
+   - Type your message in the chat input and press Enter.
+   - Udora Gen will respond with an intelligent reply.
+
+3. **Upload Files**:
+   - Click the "Upload" button to upload a PDF or image.
+   - Udora Gen will analyze the file and provide insights.
+
+4. **View Analytics**:
+   - Navigate to the "Analytics" page to view chat and file usage statistics.
+
+5. **Customize UI**:
+   - Toggle between light and dark mode using the theme toggle button.
+
+---
+
+## **API Endpoints**
+
+### **Authentication**
+- **POST /api/auth/register** - Register a new user.
+- **POST /api/auth/login** - Log in an existing user.
+
+### **Chat**
+- **POST /api/chat/send** - Send a message to the chatbot.
+- **GET /api/chat/history** - Get chat history.
+
+### **File Uploads**
+- **POST /api/file/upload** - Upload a file (PDF or image).
+- **GET /api/file/user** - Get all files uploaded by the user.
+
+### **User Profile**
+- **GET /api/user/profile** - Get user profile.
+- **PUT /api/user/profile** - Update user profile.
+
+### **Analytics**
+- **GET /api/analytics/chat** - Get chat analytics.
+- **GET /api/analytics/file** - Get file analytics.
+
+---
+
+## **Contributing**
+
+1. Fork the repository.
+2. Create a new branch:
+```bash
+git checkout -b feature/your-feature-name
+```
+3. Commit your changes:
+```bash
+git commit -m "Add your feature"
+```
+4. Push to the branch:
+```bash
+git push origin feature/your-feature-name
+```
+5. Open a pull request.
+
+---
+
+## **License**
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
+## **Contact**
+
+For any questions or feedback, please contact:
+
+Udit Gupta - udit.gupta@example.com
+
+Project Link: [GitHub Repository](https://github.com/your-username/udora-gen)
+
+---
+
+## **Flow and Connections**
+
 1. **Environment Variables**: `.env` stores sensitive data like API keys and database URLs.
 2. **Express Setup**: `app.js` configures middleware, routes, and error handling.
 3. **Server Entry**: `server.js` starts the backend server.
@@ -218,3 +218,4 @@ Copy
 ---
 
 Let me know if you need further assistance! 🚀
+

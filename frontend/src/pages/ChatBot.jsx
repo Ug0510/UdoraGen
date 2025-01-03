@@ -38,9 +38,10 @@ const ChatBot = () => {
   },[])
 
   return (
-    <div className='w-screen h-screen flex flex-col bg-gray-100'>
+    <div className='w-screen h-screen flex flex-col back-screen'>
       {/* Header */}
-      <div className='p-4 bg-blue-500 text-white text-3xl font-bold text-center'>
+      <div className='p-4 text-blue-500 text-3xl font-bold text-center'>
+        {/* <img src={fullLogo} alt="" /> */}
         Udora Gen
       </div>
 
@@ -63,13 +64,13 @@ const ChatBot = () => {
       </div>
 
       {/* Input Bar */}
-      <div className='p-4 bg-white border-t flex items-center'>
+      <div className='chat-input'>
         <input
           type='text'
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder='Type a message...'
-          className='flex-1 p-2 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500'
+          className='flex-1 p-2 border rounded-lg outline-none '
         />
         <button
           onClick={handleSend}

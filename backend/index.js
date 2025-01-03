@@ -62,7 +62,6 @@ app.post('/chat', async (req, res) => {
 
 
 app.get('/chat-history', (req, res) => {
-  console.log(history);
     res.json({ history: history });
   });
 

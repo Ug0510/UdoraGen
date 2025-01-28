@@ -8,6 +8,9 @@ const ChatBot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
 
+  // Creat ref for the chat window 
+  const chatWindow = React.useRef(null);
+
   const handleSend = async () => {
     if (input.trim() === '') return;
 
@@ -41,7 +44,11 @@ const ChatBot = () => {
 
     fetchChatHistory();
     
-  },[])
+  },[]);
+
+  useEffect(() => {
+    chatWindow.current?.scrollIntoView({behaviour:'smooth'});
+  })
 
   return (
     <div className='w-screen h-screen flex flex-col back-screen'>
@@ -67,6 +74,8 @@ const ChatBot = () => {
             {msg.sender === 'user' && <FaUser className='text-blue-500' />}
           </div>
         ))}
+        {/* This is the scroll target */}
+        <div ref={chatWindow}></div>
       </div>
 
       {/* Input Bar */}

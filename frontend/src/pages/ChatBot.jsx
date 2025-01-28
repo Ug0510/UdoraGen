@@ -26,6 +26,12 @@ const ChatBot = () => {
     
   };
 
+  const handleKeyDown = (e) => {
+    if(e.key === 'Enter'){
+      handleSend();
+    }
+  }
+
   useEffect(() => {
     const fetchChatHistory = async () => {
       const history = await getChatHistory();
@@ -54,7 +60,7 @@ const ChatBot = () => {
           >
             {msg.sender === 'bot' && <img src={white} alt="Logo" style={{width:"42px"}}/>}
             <div
-              className={`p-3 rounded-lg max-w-xs text-white ${msg.sender === 'user' ? 'bg-blue-500' : 'bg-gray-500'}`}
+              className={`p-3 rounded-lg text-white ${msg.sender === 'user' ? 'bg-blue-500' : 'bg-gray-500'}`} style={{maxWidth:'80%'}}
             >
               {msg.text}
             </div>
@@ -69,6 +75,7 @@ const ChatBot = () => {
           type='text'
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleKeyDown}
           placeholder='Type a message...'
           className='flex-1 p-2 border rounded-lg outline-none '
         />
